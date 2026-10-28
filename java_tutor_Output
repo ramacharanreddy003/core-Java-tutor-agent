@@ -1,0 +1,846 @@
+Microsoft Windows [Version 10.0.26300.9711]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ckram>cd /d "D:\workspace AI\LangChain"
+
+D:\workspace AI\LangChain>.venv\Scripts\activate
+
+(.venv) D:\workspace AI\LangChain>python -m pip install python-dotenv
+Requirement already satisfied: python-dotenv in .\.venv\Lib\site-packages (1.2.4)
+
+(.venv) D:\workspace AI\LangChain>python java_tutor.py
+Start
+
+---  Core Java Study Plan  ---
+Here is your complete, day-by-day 30-Day Core Java Learning Plan designed specifically for beginners.
+
+---
+
+### Day 1: Introduction to Java and Setup
+* **Daily Topics:** What is Java, JVM, JRE, JDK, setting up PATH, writing the first "Hello World" program.
+* **Simple Explanations and Definitions:**
+  * *JVM (Java Virtual Machine):* Executes Java bytecode.
+  * *JRE (Java Runtime Environment):* JVM + libraries to run Java apps.
+  * *JDK (Java Development Kit):* JRE + development tools (compiler) to write Java apps.
+* **Example and Code:**
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a Java program that prints your name on one line and your hobby on the next line.
+* **Important Interview Questions:** What is the difference between JDK, JRE, and JVM?
+* **Revision and Practice tasks:** Reinstall JDK and set environment variables independently without looking at notes.
+
+---
+
+### Day 2: Variables and Data Types
+* **Daily Topics:** Primitive data types (int, double, char, boolean), naming conventions, type casting.
+* **Simple Explanations and Definitions:** Variables are containers for storing data values. Primitive types are built-in data types provided directly by Java.
+* **Example and Code:**
+```java
+public class VariablesDemo {
+    public static void main(String[] args) {
+        int age = 25;
+        double price = 19.99;
+        char grade = 'A';
+        boolean isJavaFun = true;
+
+        System.out.println("Age: " + age);
+        System.out.println("Price: " + price);
+        System.out.println("Grade: " + grade);
+        System.out.println("Is Java fun? " + isJavaFun);
+    }
+}
+```
+* **Coding Problems and Exercise:** Create variables for a product (name, price, quantity, availability) and print them in a formatted sentence.
+* **Important Interview Questions:** What is the difference between widening (implicit) and narrowing (explicit) type casting?
+* **Revision and Practice tasks:** Practice converting a `double` value into an `int` using explicit casting and observe the data loss.
+
+---
+
+### Day 3: Operators in Java
+* **Daily Topics:** Arithmetic, relational, logical, assignment, and unary operators.
+* **Simple Explanations and Definitions:** Operators are symbols used to perform operations on variables and values.
+* **Example and Code:**
+```java
+public class OperatorsDemo {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Greater than: " + (a > b));
+        System.out.println("Logical AND: " + (a > 5 && b < 10));
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to calculate the perimeter and area of a rectangle using arithmetic operators.
+* **Important Interview Questions:** What is the difference between `==` operator and `.equals()` method?
+* **Revision and Practice tasks:** Test the difference between pre-increment (`++a`) and post-increment (`a++`) in a print statement.
+
+---
+
+### Day 4: Conditional Statements - if, if-else, else-if
+* **Daily Topics:** `if`, `if-else`, nested `if`, and `else-if` ladder.
+* **Simple Explanations and Definitions:** Conditional statements are used to perform different actions based on different conditions.
+* **Example and Code:**
+```java
+public class IfElseDemo {
+    public static void main(String[] args) {
+        int score = 75;
+
+        if (score >= 90) {
+            System.out.println("Grade: A");
+        } else if (score >= 75) {
+            System.out.println("Grade: B");
+        } else {
+            System.out.println("Grade: C");
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to check if a given number is even or odd.
+* **Important Interview Questions:** Can an `if` block exist without an `else` block?
+* **Revision and Practice tasks:** Write a nested `if` statement to find the largest of three numbers.
+
+---
+
+### Day 5: Conditional Statements - switch
+* **Daily Topics:** `switch` statement, `break`, `default`, and enhanced switch (Java 14+).
+* **Simple Explanations and Definitions:** A `switch` statement allows a variable to be tested for equality against a list of values.
+* **Example and Code:**
+```java
+public class SwitchDemo {
+    public static void main(String[] args) {
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Build a simple calculator using a `switch` statement for `+`, `-`, `*`, and `/`.
+* **Important Interview Questions:** Which data types can be used in a `switch` expression?
+* **Revision and Practice tasks:** Remove the `break` statements from the code above and observe fall-through behavior.
+
+---
+
+### Day 6: Loops - for Loop
+* **Daily Topics:** `for` loop syntax, initialization, condition, increment/decrement, nested `for` loops.
+* **Simple Explanations and Definitions:** Loops are used to execute a block of code repeatedly until a specified condition is met.
+* **Example and Code:**
+```java
+public class ForLoopDemo {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Count: " + i);
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to print the multiplication table of 5.
+* **Important Interview Questions:** What is an infinite `for` loop and how do you write one?
+* **Revision and Practice tasks:** Create a nested `for` loop to print a simple right-angled triangle pattern using asterisks (`*`).
+
+---
+
+### Day 7: Loops - while and do-while
+* **Daily Topics:** `while` loop, `do-while` loop, entry-controlled vs exit-controlled loops.
+* **Simple Explanations and Definitions:**
+  * *While loop:* Checks condition first, then executes.
+  * *Do-while loop:* Executes at least once, then checks condition.
+* **Example and Code:**
+```java
+public class WhileLoopDemo {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i <= 3) {
+            System.out.println("While iteration: " + i);
+            i++;
+        }
+
+        int j = 1;
+        do {
+            System.out.println("Do-While iteration: " + j);
+            j++;
+        } while (j <= 3);
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to reverse a given integer (e.g., input `1234`, output `4321`) using a `while` loop.
+* **Important Interview Questions:** What is the primary difference between a `while` loop and a `do-while` loop?
+* **Revision and Practice tasks:** Write a guessing game loop that runs until the user inputs the correct number.
+
+---
+
+### Day 8: Control Statements - break and continue
+* **Daily Topics:** `break` keyword, `continue` keyword, labeled breaks.
+* **Simple Explanations and Definitions:**
+  * *Break:* Exits the loop immediately.
+  * *Continue:* Skips the current iteration and moves to the next.
+* **Example and Code:**
+```java
+public class ControlStatementsDemo {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue; // skips 3
+            }
+            if (i == 5) {
+                break; // stops loop at 5
+            }
+            System.out.println("Value: " + i);
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Print all numbers from 1 to 50 except those divisible by 3 using `continue`.
+* **Important Interview Questions:** Can `break` be used outside of loops or switch statements?
+* **Revision and Practice tasks:** Use a labeled `break` to break out of a nested loop structure.
+
+---
+
+### Day 9: Introduction to Arrays
+* **Daily Topics:** 1D array declaration, instantiation, initialization, accessing elements, length property.
+* **Simple Explanations and Definitions:** An array is a fixed-size container that holds values of the same data type.
+* **Example and Code:**
+```java
+public class ArrayDemo {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to find the maximum and minimum value in an integer array.
+* **Important Interview Questions:** What is `ArrayIndexOutOfBoundsException` and when does it occur?
+* **Revision and Practice tasks:** Write a program to calculate the sum and average of elements in an integer array.
+
+---
+
+### Day 10: Multi-dimensional Arrays
+* **Daily Topics:** 2D arrays, declaration, initialization, nested loops for 2D arrays.
+* **Simple Explanations and Definitions:** A 2D array is an array of arrays, often visualized as a matrix with rows and columns.
+* **Example and Code:**
+```java
+public class MatrixDemo {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to add two 2D matrices of size 2x2.
+* **Important Interview Questions:** What is a jagged array in Java?
+* **Revision and Practice tasks:** Write a program to print the transpose of a 2D matrix.
+
+---
+
+### Day 11: Introduction to Object-Oriented Programming (OOP)
+* **Daily Topics:** Class, Object, state, behavior, instantiation using `new` keyword.
+* **Simple Explanations and Definitions:**
+  * *Class:* A blueprint or template for creating objects.
+  * *Object:* An instance of a class with state (fields) and behavior (methods).
+* **Example and Code:**
+```java
+class Car {
+    String color;
+    String model;
+
+    void drive() {
+        System.out.println(model + " is driving.");
+    }
+}
+
+public class OopIntro {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.color = "Red";
+        myCar.model = "Tesla";
+        myCar.drive();
+    }
+}
+```
+* **Coding Problems and Exercise:** Create a `Student` class with fields name and rollNumber, and a method to display details. Create two student objects.
+* **Important Interview Questions:** What is the difference between a class and an object?
+* **Revision and Practice tasks:** Design a `BankAccount` class with fields `accountNumber` and `balance`.
+
+---
+
+### Day 12: Methods in Java
+* **Daily Topics:** Method declaration, return types, parameters, method signature, method overloading.
+* **Simple Explanations and Definitions:** A method is a block of code that performs a specific task and runs only when it is called.
+* **Example and Code:**
+```java
+public class MethodDemo {
+    // Method overloading
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        MethodDemo obj = new MethodDemo();
+        System.out.println(obj.add(5, 10));
+        System.out.println(obj.add(5.5, 10.2));
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a method that takes an integer and returns `true` if it is a prime number, else `false`.
+* **Important Interview Questions:** Can we overload `main()` method in Java?
+* **Revision and Practice tasks:** Create three overloaded methods named `multiply` taking different parameter counts and types.
+
+---
+
+### Day 13: Constructors
+* **Daily Topics:** Default constructor, parameterized constructor, constructor overloading, `this` keyword.
+* **Simple Explanations and Definitions:** A constructor is a special method used to initialize objects. It has the same name as the class and no return type.
+* **Example and Code:**
+```java
+class Book {
+    String title;
+    int pages;
+
+    // Parameterized constructor
+    Book(String title, int pages) {
+        this.title = title;
+        this.pages = pages;
+    }
+
+    void display() {
+        System.out.println(title + " has " + pages + " pages.");
+    }
+}
+
+public class ConstructorDemo {
+    public static void main(String[] args) {
+        Book myBook = new Book("Java Programming", 350);
+        myBook.display();
+    }
+}
+```
+* **Coding Problems and Exercise:** Create a `Rectangle` class with default and parameterized constructors to calculate area.
+* **Important Interview Questions:** What is the purpose of the `this` keyword in Java?
+* **Revision and Practice tasks:** Implement constructor chaining using `this()`.
+
+---
+
+### Day 14: Access Modifiers
+* **Daily Topics:** `private`, `default` (package-private), `protected`, `public`.
+* **Simple Explanations and Definitions:** Access modifiers define the visibility or scope of fields, methods, and classes.
+* **Example and Code:**
+```java
+class Person {
+    private String name; // Private field
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class AccessModifierDemo {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("Alice");
+        System.out.println("Name: " + p.getName());
+    }
+}
+```
+* **Coding Problems and Exercise:** Create an `Employee` class with private salary and public getter/setter methods. Validate that salary cannot be negative.
+* **Important Interview Questions:** What is encapsulation and how do access modifiers help achieve it?
+* **Revision and Practice tasks:** Test accessing a default-scoped variable from outside its package to understand compilation errors.
+
+---
+
+### Day 15: Inheritance
+* **Daily Topics:** `extends` keyword, `super` keyword, single inheritance, multi-level inheritance.
+* **Simple Explanations and Definitions:** Inheritance is a mechanism where a new class (child/subclass) acquires the properties and methods of an existing class (parent/superclass).
+* **Example and Code:**
+```java
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat(); // Inherited method
+        myDog.bark(); // Subclass method
+    }
+}
+```
+* **Coding Problems and Exercise:** Create a superclass `Vehicle` and a subclass `Car` that inherits fields like `speed` and `fuel`.
+* **Important Interview Questions:** Why does Java not support multiple inheritance with classes?
+* **Revision and Practice tasks:** Use the `super` keyword to call a parent class constructor inside a subclass constructor.
+
+---
+
+### Day 16: Polymorphism
+* **Daily Topics:** Compile-time polymorphism (method overloading) vs Runtime polymorphism (method overriding), `@Override` annotation.
+* **Simple Explanations and Definitions:** Polymorphism allows a single action to be performed in different ways (many forms).
+* **Example and Code:**
+```java
+class Shape {
+    void draw() {
+        System.out.println("Drawing a generic shape.");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        Shape myShape = new Circle(); // Upcasting
+        myShape.draw(); // Calls Circle's draw method at runtime
+    }
+}
+```
+* **Coding Problems and Exercise:** Create a `Bank` superclass with a method `getInterestRate()`. Create subclasses `SBI` and `ICICI` that override this method.
+* **Important Interview Questions:** What is dynamic method dispatch?
+* **Revision and Practice tasks:** Write an example demonstrating runtime polymorphism with array references.
+
+---
+
+### Day 17: Abstract Classes and Methods
+* **Daily Topics:** `abstract` keyword, abstract classes, abstract methods, concrete methods in abstract classes.
+* **Simple Explanations and Definitions:** An abstract class cannot be instantiated on its own and serves as a template for other classes. Abstract methods have no body and must be implemented by subclasses.
+* **Example and Code:**
+```java
+abstract class Appliance {
+    abstract void turnOn(); // Abstract method
+
+    void displayType() {
+        System.out.println("This is a home appliance.");
+    }
+}
+
+class Fan extends Appliance {
+    void turnOn() {
+        System.out.println("Fan is turned on.");
+    }
+}
+
+public class AbstractDemo {
+    public static void main(String[] args) {
+        Appliance app = new Fan();
+        app.turnOn();
+        app.displayType();
+    }
+}
+```
+* **Coding Problems and Exercise:** Create an abstract class `Employee` with an abstract method `calculateSalary()`. Implement it in `FullTimeEmployee` and `Intern`.
+* **Important Interview Questions:** Can an abstract class have a constructor?
+* **Revision and Practice tasks:** Try instantiating an abstract class directly and analyze the compiler error.
+
+---
+
+### Day 18: Interfaces
+* **Daily Topics:** `interface` keyword, `implements`, multiple inheritance via interfaces, default and static methods in interfaces (Java 8+).
+* **Simple Explanations and Definitions:** An interface is a reference type in Java that is a collection of abstract methods. Classes implement interfaces to guarantee specific behaviors.
+* **Example and Code:**
+```java
+interface Flyable {
+    void fly();
+}
+
+class Bird implements Flyable {
+    public void fly() {
+        System.out.println("Bird is flying.");
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        Flyable f = new Bird();
+        f.fly();
+    }
+}
+```
+* **Coding Problems and Exercise:** Create an interface `Payment` with a method `pay()`. Implement it in `CreditCard` and `PayPal` classes.
+* **Important Interview Questions:** What is the difference between an abstract class and an interface?
+* **Revision and Practice tasks:** Implement multiple interfaces in a single class.
+
+---
+
+### Day 19: Encapsulation and Packages
+* **Daily Topics:** Private variables, public getters/setters, `package` keyword, `import` statement.
+* **Simple Explanations and Definitions:** Encapsulation is the mechanism of wrapping data (variables) and code acting on the data (methods) together as a single unit. Packages are namespaces used to group related classes.
+* **Example and Code:**
+```java
+class Account {
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+public class EncapsulationDemo {
+    public static void main(String[] args) {
+        Account acc = new Account();
+        acc.deposit(500.0);
+        System.out.println("Balance: " + acc.getBalance());
+    }
+}
+```
+* **Coding Problems and Exercise:** Create a fully encapsulated `Student` class where fields `age` and `name` cannot be modified directly.
+* **Important Interview Questions:** What are the benefits of encapsulation?
+* **Revision and Practice tasks:** Create a custom package using the `package` keyword and import it into another file.
+
+---
+
+### Day 20: String Handling - Basics
+* **Daily Topics:** String immutability, String pool, String creation (`literal` vs `new`), basic string methods (`length()`, `charAt()`, `substring()`, `equals()`).
+* **Simple Explanations and Definitions:** Strings in Java are objects representing sequences of characters. They are immutable, meaning their values cannot be changed after creation.
+* **Example and Code:**
+```java
+public class StringBasicDemo {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = "Hello"; // Points to same String Pool reference
+
+        System.out.println(s1 == s2); // true
+        System.out.println(s1.equals(s2)); // true
+        System.out.println("Length: " + s1.length());
+        System.out.println("Character at index 1: " + s1.charAt(1));
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to count the number of vowels in a given string.
+* **Important Interview Questions:** Why are Strings immutable in Java?
+* **Revision and Practice tasks:** Compare two string objects created using the `new` keyword using `==` versus `.equals()`.
+
+---
+
+### Day 21: String Manipulation - StringBuilder and StringBuffer
+* **Daily Topics:** Mutability in strings, `StringBuilder`, `StringBuffer`, thread safety differences, common methods (`append()`, `reverse()`, `insert()`).
+* **Simple Explanations and Definitions:** `StringBuilder` and `StringBuffer` are mutable sequences of characters used when you need to modify strings frequently without creating excessive object overhead.
+* **Example and Code:**
+```java
+public class StringBuilderDemo {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Java");
+        sb.append(" Programming");
+        sb.reverse();
+        System.out.println(sb); // gnimmargorp avaJ
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to check if a given string is a palindrome using `StringBuilder`.
+* **Important Interview Questions:** What is the difference between `String`, `StringBuilder`, and `StringBuffer`?
+* **Revision and Practice tasks:** Perform a performance benchmark test using loop concatenations with `String` vs `StringBuilder`.
+
+---
+
+### Day 22: Exception Handling - Basics (`try`, `catch`, `finally`)
+* **Daily Topics:** What is an exception, `try`, `catch`, `finally` blocks, handling runtime exceptions (`ArithmeticException`, `NullPointerException`).
+* **Simple Explanations and Definitions:** An exception is an abnormal event that disrupts the normal flow of program execution. Exception handling ensures the program doesn't crash abruptly.
+* **Example and Code:**
+```java
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // Throws ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block always executes.");
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program that takes user input for an array index and catches `ArrayIndexOutOfBoundsException` safely.
+* **Important Interview Questions:** When does the `finally` block *not* execute?
+* **Revision and Practice tasks:** Use multiple catch blocks to handle different types of exceptions in a single try block.
+
+---
+
+### Day 23: Exception Handling - `throw` and `throws`
+* **Daily Topics:** `throw` keyword, `throws` keyword, checked vs unchecked exceptions.
+* **Simple Explanations and Definitions:**
+  * *Throw:* Used to explicitly throw a single exception.
+  * *Throws:* Used in method signatures to declare that a method might throw checked exceptions.
+* **Example and Code:**
+```java
+public class ThrowThrowsDemo {
+    static void validateAge(int age) throws IllegalArgumentException {
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be 18 or above.");
+        } else {
+            System.out.println("Access granted.");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            validateAge(15);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Caught: " + e.getMessage());
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Create a custom exception `InvalidBalanceException` and throw it if a bank withdrawal exceeds the available balance.
+* **Important Interview Questions:** What is the difference between `throw` and `throws`?
+* **Revision and Practice tasks:** Write a method declaring a checked exception (`IOException`) using `throws` and handle it in the caller method.
+
+---
+
+### Day 24: Introduction to Collections Framework
+* **Daily Topics:** Hierarchy of collections, `Collection` interface, `List` interface overview, `ArrayList`.
+* **Simple Explanations and Definitions:** The Collections Framework provides an architecture to store and manipulate groups of objects. `ArrayList` is a dynamic, resizable array implementation of the `List` interface.
+* **Example and Code:**
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Mango");
+
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Create an `ArrayList` of integers, add 5 numbers, and find their sum using a for-each loop.
+* **Important Interview Questions:** What is the difference between an array and an `ArrayList`?
+* **Revision and Practice tasks:** Practice common `ArrayList` methods: `remove()`, `contains()`, `set()`, and `size()`.
+
+---
+
+### Day 25: List Interface - LinkedList and Iterators
+* **Daily Topics:** `LinkedList`, internal doubly-linked list architecture, `Iterator` interface, `ListIterator`.
+* **Simple Explanations and Definitions:** `LinkedList` stores elements in nodes with pointers to previous and next nodes, making frequent insertions and deletions faster than an `ArrayList`.
+* **Example and Code:**
+```java
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class LinkedListDemo {
+    public static void main(String[] args) {
+        LinkedList<String> animals = new LinkedList<>();
+        animals.add("Cat");
+        animals.add("Dog");
+        animals.add("Horse");
+
+        Iterator<String> iterator = animals.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to reverse a `LinkedList` using its built-in descending iterator.
+* **Important Interview Questions:** When should you choose `ArrayList` over `LinkedList` and vice versa?
+* **Revision and Practice tasks:** Modify an element in a collection while iterating through it using a `ListIterator`.
+
+---
+
+### Day 26: Set Interface - HashSet, LinkedHashSet, TreeSet
+* **Daily Topics:** `Set` properties (no duplicates), `HashSet`, `LinkedHashSet`, `TreeSet` (sorted order).
+* **Simple Explanations and Definitions:** A `Set` is a collection that contains no duplicate elements.
+* **Example and Code:**
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemo {
+    public static void main(String[] args) {
+        Set<String> uniqueNames = new HashSet<>();
+        uniqueNames.add("Alice");
+        uniqueNames.add("Bob");
+        uniqueNames.add("Alice"); // Duplicate, ignored
+
+        System.out.println(uniqueNames);
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to remove duplicate elements from an `ArrayList` by transferring its elements to a `HashSet`.
+* **Important Interview Questions:** What is the underlying data structure of `HashSet`?
+* **Revision and Practice tasks:** Compare insertion order maintenance across `HashSet`, `LinkedHashSet`, and `TreeSet`.
+
+---
+
+### Day 27: Map Interface - HashMap, LinkedHashMap, TreeMap
+* **Daily Topics:** Key-value pairs, `Map` interface, `HashMap`, `LinkedHashMap`, `TreeMap`, iterating over maps (`entrySet()`, `keySet()`).
+* **Simple Explanations and Definitions:** A `Map` is an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
+* **Example and Code:**
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapDemo {
+    public static void main(String[] args) {
+        Map<String, Integer> scores = new HashMap<>();
+        scores.put("Alice", 90);
+        scores.put("Bob", 85);
+
+        for (Map.Entry<String, Integer> entry : scores.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program to count the frequency of each character in a string using a `HashMap`.
+* **Important Interview Questions:** How does `HashMap` work internally (hashCode and equals)?
+* **Revision and Practice tasks:** Retrieve, update, and remove key-value pairs from a `HashMap`.
+
+---
+
+### Day 28: Generics
+* **Daily Topics:** Generic classes, generic methods, type parameters (`<T>`), wildcard (`<?>`).
+* **Simple Explanations and Definitions:** Generics enable types (classes and methods) to be parameters when defining classes, interfaces, and methods, providing compile-time type safety.
+* **Example and Code:**
+```java
+class Box<T> {
+    private T item;
+
+    public void setItem(T item) {
+        this.item = item;
+    }
+
+    public T getItem() {
+        return item;
+    }
+}
+
+public class GenericsDemo {
+    public static void main(String[] args) {
+        Box<String> stringBox = new Box<>();
+        stringBox.setItem("Hello Generics");
+        System.out.println(stringBox.getItem());
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a generic method that prints elements of any array (Integer, String, Double).
+* **Important Interview Questions:** What is type erasure in Java generics?
+* **Revision and Practice tasks:** Use a bounded wildcard (`<? extends Number>`) in a method parameter.
+
+---
+
+### Day 29: File Handling
+* **Daily Topics:** `File` class, reading files using `Scanner` or `BufferedReader`, writing files using `FileWriter` or `BufferedWriter`.
+* **Simple Explanations and Definitions:** File handling allows reading from and writing to files stored on your disk system using standard Java I/O classes.
+* **Example and Code:**
+```java
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+import java.io.File;
+
+public class FileDemo {
+    public static void main(String[] args) {
+        try {
+            // Writing to a file
+            FileWriter writer = new FileWriter("test.txt");
+            writer.write("Hello from File Handling!");
+            writer.close();
+
+            // Reading from a file
+            File file = new File("test.txt");
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                System.out.println(scanner.nextLine());
+            }
+            scanner.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+```
+* **Coding Problems and Exercise:** Write a program that counts the total number of lines and words in a text file.
+* **Important Interview Questions:** Why must file streams be closed after use?
+* **Revision and Practice tasks:** Use `try-with-resources` statement to automatically manage and close file resources.
+
+---
+
+### Day 30: Basic Multithreading
+* **Daily Topics:** Creating threads by extending `Thread` class, implementing `Runnable` interface, `start()` vs `run()`, basic thread lifecycle methods (`sleep()`).
+* **Simple Explanations and Definitions:** Multithreading is the ability of a program to execute multiple parts (threads) simultaneously to maximize CPU utilization.
+* **Example and Code:**
+```java
+class MyTask implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 3; i++) {
+            System.out.println(Thread.currentThread().getName() + " - Count: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+}
+
+public class MultithreadingDemo {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new MyTask(), "Thread-1");
+        Thread t2 = new Thread(new MyTask(), "Thread-2");
+
+        t1.start();
+        t2.start();
+    }
+}
+```
+* **Coding Problems and Exercise:** Create two threads where one prints even numbers up to 10 and the other prints odd numbers up to 10.
+* **Important Interview Questions:** What is the difference between extending the `Thread` class and implementing the `Runnable` interface?
+* **Revision and Practice tasks:** Review all 30 days of core Java concepts, write a final comprehensive project combining OOP, collections, and exception handling.
+
+(.venv) D:\workspace AI\LangChain>
